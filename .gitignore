@@ -1,12 +1,5 @@
-# Virtual environments
-.venv/
-venv/
-ENV/
-env/
-
-# Python bytecode (optional but highly recommended)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-lib/
+bin
+include
+lib
+lib64
+packages.txt
