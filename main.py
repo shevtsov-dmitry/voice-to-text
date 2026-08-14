@@ -2,17 +2,16 @@ import os
 import tempfile
 from pathlib import Path
 
-from telegram import Update, ReplyKeyboardMarkup
+from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import (
     Application,
     CommandHandler,
-    MessageHandler,
     ContextTypes,
+    MessageHandler,
     filters,
 )
 
 from transcriber import Transcriber
-
 
 TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 
@@ -106,12 +105,12 @@ def main():
     application = (
         Application.builder()
         .token(TOKEN)
+        .proxy("socks5://127.0.0.1:10808")
+        .get_updates_proxy("socks5://127.0.0.1:10808")
         .build()
     )
 
-    application.add_handler(
-        CommandHandler("start", start)
-    )
+    application.add_handler(CommandHandler("start", start))
 
     application.add_handler(
         MessageHandler(
