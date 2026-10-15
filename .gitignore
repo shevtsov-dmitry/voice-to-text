@@ -1,20 +1,2 @@
-bin
-include
-lib
-lib64
-packages.txt
-
-# Virtual environments
-.venv/
-venv/
-ENV/
-env/
-.env
-
-# Python bytecode (optional but highly recommended)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-lib/
-lib64
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*

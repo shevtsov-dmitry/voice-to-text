@@ -5,7 +5,7 @@ model = WhisperModel(
 )
 
 segments, info = model.transcribe(
-    "audio.mp3", language="ru", condition_on_previous_text=False
+    "/home/shd/tmp/voice.wav", language="ru", condition_on_previous_text=False
 )
 for segment in segments:
-    print("[%.2fs -> %.2fs] %s" % (segment.start, segment.end, segment.text))
+    print("%s" % (segment.text))
